@@ -1,19 +1,12 @@
-public class Car {
-
-    // Vi deklarerar instansvariabeln name
-    private String name;
+public class Car extends Vehicle {
 
     public Car(String name) {
-        this.name = name;
+        super(name, "Motorized");
     }
 
-    // Getter
-    public String getName() {
-        return name;
+    @Override
+    public void soundWarning() {
+        System.out.println("Tut-tut");
     }
 
-    // Setter
-    public void setName(String name) {
-        this.name = name;
-    }
 }
