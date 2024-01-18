@@ -1,3 +1,7 @@
+import java.util.InputMismatchException;
+import java.util.Random;
+import java.util.Scanner;
+
 public class Main {
 
     static final double GAME_VERSION = 1.0;
@@ -49,5 +53,44 @@ public class Main {
         System.out.println(("Price: " + pumaShirt.getPrice()));
 
         System.out.println(nikeShirt.getCondition());
+
+        // Calculator, Scanner och Random
+
+        Scanner intInput = new Scanner(System.in);
+        Scanner strInput = new Scanner(System.in);
+
+        Random random = new Random();
+
+        System.out.println(random.nextInt(99));
+        System.out.println(random.nextInt(100, 999));
+
+        Calculator calculator = new Calculator();
+        System.out.println(calculator.multiply(2, 2));
+        System.out.println(calculator.multiply(2, 2, 2));
+
+        //System.out.printf("Skriv ditt namn: ");
+        // String userName = strInput.nextLine();
+        //System.out.printf("Hej %s!\n", userName);
+
+
+        while (true) {
+            try {
+                System.out.printf("Skriv ett tal att multiplicera med 5: ");
+                // Integer.parseInt() konverterar text till heltal
+                int userIntInput = Integer.parseInt(strInput.nextLine());
+                System.out.printf("Svaret är %.0f\n",
+                        calculator.multiply(userIntInput, 5));
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Du måste ge ett heltal!");
+            } catch (Exception e) {
+                System.out.println("Något gick fel");
+            }
+        }
+
+        // Code Challenge: Random Rundown
+
+
+
     }
 }

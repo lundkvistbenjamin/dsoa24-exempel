@@ -1,10 +1,10 @@
 public class Calculator {
 
-    public int multiply(int x, int y) {
+    public double multiply(double x, double y) {
         return x * y;
     }
 
-    public int multiply(int x, int y, int z) {
+    public double multiply(double x, double y, double z) {
         return x * y * z;
     }
 }
