@@ -1,4 +1,6 @@
-abstract class Vehicle {
+import java.io.Serializable;
+
+abstract class Vehicle implements Serializable {
     // Super class oftast abstract!
 
 
