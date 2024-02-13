@@ -4,7 +4,7 @@ public class Linky {
     Node last;
 
     // Inre klass (inner class)
-    private class Node {
+    private static class Node {
         Person person;
         Node next;
 
@@ -17,8 +17,8 @@ public class Linky {
     public void add(Person person) {
         Node n = new Node(person, null);
         if (first == null) first = n; // Listan är tom
-        if (last != null) last.next = n; // Gamla last.next blir nya n
-        last = n; // Nya noden blir ny last
+        if (last != null) last.next = n; // gamla last.next blir nya n
+        last = n; // nya noden blir ny last
     }
 
     public int size() {
@@ -26,7 +26,7 @@ public class Linky {
         Node n = first;
         while (n != null) {
             n = n.next;
-            count ++;
+            count++;
         }
         return count;
     }
