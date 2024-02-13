@@ -7,6 +7,16 @@ public class Main {
     public static void main(String[] args) {
         String[] lotrCharacters = {"Frodo", "Samwise", "Gandalf", "Aragorn", "Legolas", "Gimli", "Boromir", "Gollum", "Saruman", "Galadriel", "Elrond", "Glorfindel", "Bilbo", "Merry", "Pippin", "Treebeard", "Faramir", "Éowyn", "Éomer", "Grima"};
 
+
+        //CC: Circular Arr-gument
+        String[] weekDays = { "må", "ti", "on", "to", "fr", "lö", "sö" };
+
+        int today = 4;
+        System.out.printf("I dag är det %s\n",weekDays[today]);
+        System.out.printf("I övermorgon är det %s\n", weekDays[today+2]);
+        System.out.printf("Om %d dagar är det %s, Om %d dagar är det %s\n", 6, weekDays[(today + 6) % weekDays.length], 15, weekDays[(today + 15) % weekDays.length]);
+
+        /*
         Graphy graphy = new Graphy();
         graphy.createNode("skj", "Skjorta");
         graphy.createNode("jea", "Jeans");
@@ -51,11 +61,11 @@ public class Main {
         linky.printLinky();
 
         System.out.printf("linky.size(): %d\n", linky.size());
+        */
 
 
-
-
-        /* System.out.println("lotr size: " + lotr.size());
+        /*
+        System.out.println("lotr size: " + lotr.size());
         System.out.println(lotr);
         lotr.add("Sauron");
         System.out.println(lotr);
@@ -64,7 +74,8 @@ public class Main {
         lotr.reverse();
         System.out.println(lotr);
 
-        new BigO(); */
+        new BigO();
+        */
 
     }
 }
