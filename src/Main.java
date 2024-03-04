@@ -16,6 +16,8 @@ public class Main {
         System.out.printf("I övermorgon är det %s\n", weekDays[today+2]);
         System.out.printf("Om %d dagar är det %s, Om %d dagar är det %s\n", 6, weekDays[(today + 6) % weekDays.length], 15, weekDays[(today + 15) % weekDays.length]);
 
+        Utils.countdown(10);
+
         /*
         Graphy graphy = new Graphy();
         graphy.createNode("skj", "Skjorta");

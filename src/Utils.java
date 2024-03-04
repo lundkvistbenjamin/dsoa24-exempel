@@ -33,4 +33,11 @@ public class Utils {
         return rnd.nextInt(100, 999);
     }
 
+    static void countdown(int num) {
+        if (num < 0) return;
+        System.out.println(num);
+        num--;
+        countdown(num);
+    }
+
 }
